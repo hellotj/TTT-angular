@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>TickityTackityToe</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="ttt.js"></script>
+</head>
+<body x-ng-app= "" x-ng-controller="TTT_ctrl">
+	<div class="title">tic tac tow-truck.</div><br />
+	<div class="board">
+      <div class="cell" x-ng-repeat="c in cells track by $index" x-ng-click="makeMove($index);">{{c}}</div>
+
+
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylle.css"/>
+	<script src="ttt.js"></script>
+	
+</head>
+
+<body x-ng-app="" x-ng-controller="TTT_ctrl">
+
+	<div class="board">
+         <div class="cell" x-ng-repeat="c in cells track by $index" x-ng-click="makeMove($index);">{{c}}</div>
+        </div>
+   
+
+	
+	
+</body>
+</html>
+ -->
