@@ -1,62 +1,32 @@
 <html>
 <head>
-	<title>TickityTackityToe</title>
+	<link href='https://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<title>TTT</title>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" ></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="ttt.js"></script>
+
 </head>
-<body x-ng-app= "" x-ng-controller="TTT_ctrl">
-	<div class="title">tic tac tow-truck.</div><br />
+
+<body x-ng-app= "ttthomander" x-ng-controller="TTT_ctrl">
+	
+	<div class="score">
+	<div class="X group">X: {{winningStrings[game.xWin]}}</div>
+
+	<div class="O group">O: {{winningStrings[game.oWin]}}</div>
+	<div class="reset" x-ng-show="win" x-ng-click="newgame()";>Reset</div>
+	</div>
+
 	<div class="board">
-      <div class="cell" x-ng-repeat="c in cells track by $index" x-ng-click="makeMove($index);">{{c}}</div>
 
-
-  </div>
+	<div class="cell" x-ng-repeat="c in game.cells track by $index" x-ng-click="makeMove($index);" x-ng-bind="changeVar(c)"></div>
+	
+	
+	</div>
 </body>
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-<!DOCTYPE html>
-<html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="stylle.css"/>
-	<script src="ttt.js"></script>
-	
-</head>
-
-<body x-ng-app="" x-ng-controller="TTT_ctrl">
-
-	<div class="board">
-         <div class="cell" x-ng-repeat="c in cells track by $index" x-ng-click="makeMove($index);">{{c}}</div>
-        </div>
-   
-
-	
-	
-</body>
-</html>
- -->
