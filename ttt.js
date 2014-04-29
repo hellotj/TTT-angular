@@ -93,6 +93,8 @@ function changeback(color){
 		$scope.game.$save();
 	};
 
+
+
 	function winCount(player){ //Winner counter
 		if (player == -1){
 			$scope.game.oWin +=1;
@@ -104,6 +106,7 @@ function changeback(color){
 		}
 	}
 	$scope.$watch("game.win", function(newVal, oldVal){
+		console.log("newVal: " + newVal)
 		switch(newVal) {
 			case 0: 
 				changeback ("-webkit-linear-gradient(193deg, rgba(281,85,5,.9),rgba(134,173,77,.8),rgba(43,195,244,1),rgba(281,85,5,.9))");
@@ -153,20 +156,21 @@ function changeback(color){
 
 			}
 		}
-			if ($scope.game.cells[8] == player && $scope.game.cells[4] == player && $scope.game.cells[0] == player){
-				$scope.game.win = player;
-				winCount(player);
-			
-			}
-			if ($scope.game.cells[2] === player && $scope.game.cells[4] === player && $scope.game.cells[6] === player){
-				$scope.game.win = player;
-				winCount(player);
-				
-		}
-		else if ($scope.game.clicks==9 && $scope.game.win === false){
+		if ($scope.game.cells[8] == player && $scope.game.cells[4] == player && $scope.game.cells[0] == player){
 			$scope.game.win = player;
-				$scope.game.win();
-				winCount(player);
+			winCount(player);
+		
+			}
+		if ($scope.game.cells[2] === player && $scope.game.cells[4] === player && $scope.game.cells[6] === player){
+			$scope.game.win = player;
+			winCount(player);
+			
+		}
+		else if ($scope.game.clicks==9 && $scope.game.win == 0){
+			$scope.game.win = 2;
+			
+			
+
 				
 		}
 	

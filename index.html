@@ -17,7 +17,7 @@
 	<div class="X group">X: {{winningStrings[game.xWin]}}</div>
 
 	<div class="O group">O: {{winningStrings[game.oWin]}}</div>
-	<div class="reset" x-ng-show="win" x-ng-click="newgame()";>Reset</div>
+	<div class="reset" x-ng-show="game.win!=0" x-ng-click="newgame();">Reset</div>
 	</div>
 
 	<div class="board">

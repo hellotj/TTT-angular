@@ -127,25 +127,36 @@ body {
 }
 .reset {
 	display: inline-block;
-	background: blue;
+	/* background: blue; */
 	float: left;
-	margin: 14% 0 0 32%;
-	border-radius: 50%;
+	margin: 6% 0 0 12%;
+	-webkit-text-stroke-width: .2;
+	-webkit-text-stroke-color: white;
+	/* border-radius: 50%; */
 	font-family: 'Monda', 'sans-serif';
-	font-size: 1em;
-	text-align: center;
-	color: white;
-	border: 1px solid white;
-	box-shadow: inset 0 0 5px white;
-	-webkit-box-shadow: inset 0 0 5px white;
-	opacity: .5;
-	line-height: 0;
-	padding: 17%;
-	letter-spacing: -1em;
-	text-indent: -.7em;
-	z-index: 1;
+	font-size: 5em;
+	color: rgba(0, 0, 0, 0);
+	/* text-align: center; */
+	/* border: 1px solid white; */
+	/* box-shadow: inset 0 0 5px white; */
+	/* -webkit-box-shadow: inset 0 0 5px white; */
+	/* opacity: .5; */
+	/* line-height: 0; */
+	/* padding: 5px; */
+	letter-spacing: .2em;
+	/* text-indent: -.7em; */
 	
-	/*-webkit-animation: fadeIn ease-in 1;
+-webkit-animation: fadeIn ease-in 1;
+-moz-animation: fadeIn ease-in 1;
+animation: fadeIn ease-in 1;
+-webkit-animation-fill-mode: forwards;
+-moz-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+-webkit-animation-duration: 2.5s;
+-moz-animation-duration: 2.5s;
+animation-duration: 2.5s;
+	
+	-webkit-animation: fadeIn ease-in 1;
 	-moz-animation: fadeIn ease-in 1;
 	animation: fadeIn ease-in 1;
 	
@@ -155,7 +166,7 @@ body {
 	
 	-webkit-animation-duration: 2.5s;
 	-moz-animation-duration: 2.5s;
-	animation-duration: 2.5s;*/
+	animation-duration: 2.5s;
 }
  
 }
